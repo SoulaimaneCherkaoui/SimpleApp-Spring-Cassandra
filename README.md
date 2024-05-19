@@ -4,6 +4,7 @@
 
 ## Créer une entité Product pour réaliser les opérations d'accès à la base données.
 
+
 @Table("users")
 @NoArgsConstructor@AllArgsConstructor@Getter@Setter@ToString
 public class Product {
@@ -16,11 +17,13 @@ public class Product {
 
 ## Créer un repository ProductRepository
 
+
 public interface ProductRepo extends CassandraRepository<Product, UUID> {
 
 }
 
 ## Créer un service ProductService qui réalise les opérations CRUD de base et donne la possibilité de chercher des produits par mot clé.
+
 
 @Service
 public class ProductService {
@@ -48,6 +51,7 @@ public class ProductService {
 }
 
 ## Créer un controller ProductController qui expose les diffirentes fonctionlités de l'application.
+
 
 @RestController
 @RequestMapping("/users")
